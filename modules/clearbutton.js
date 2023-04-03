@@ -3,7 +3,7 @@ export default function clearbutton() {
   clearbtn.addEventListener('click', () => {
     const newArray = JSON.parse(localStorage.getItem('Tasks'));
 
-    const filterArray = newArray.filter((e) => e.completed === false);
+    const filterArray = newArray.filter((item) => item.completed === false);
     filterArray.forEach((item, i) => {
       item.index = i;
     });
